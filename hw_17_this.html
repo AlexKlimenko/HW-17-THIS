@@ -54,21 +54,25 @@
 
 			
 			
+///////////////////////////////////////////////////////////////////////////////////////////			
+			console.log("3.");
 
+			function getName() {
 
-			
-			console.log("3. Сколько прошло полных недель с начала года?");
-
-			function weekFromStart() {
-				var todayDate = Date.now();
-					startDate = new Date().setFullYear(2017, 0, 1, 0, 0, 0, 0);
-					console.log(`сeгодня миллисекунд ${todayDate}`);
-					console.log(`1го января 2017 г. миллисекунд ${startDate}`);
-				return Math.floor((todayDate - startDate) / 7 / 24 / 3600 / 1000);
+				return this.name;
 			}
-			var result = weekFromStart();
-			console.log(`с 01.01.2017 до сегодня прошло ${result} недель`);
-			
 
+			const user = {
+				name: "Abraham",
+				getName: getName
+			};
+			// getUserName = function() {...}
+			console.log(user.getName());
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+			console.log("4.");
 </script>
 </body>
