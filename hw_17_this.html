@@ -242,6 +242,54 @@
 		var b = Math.min.apply(null, numbers);
 		console.log(b);
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+		console.log("6)");
+
+		const element = {
+			height: "15px",
+			marginTop: "5px",
+			marginBottom: "5px",
+			getFullHeight: function() {
+
+				return parseFloat(this.height) + 
+					   parseFloat(this.marginTop) + 
+					   parseFloat(this.marginBottom) +
+					   'px';
+			}
+		};
+
+		console.log(element.getFullHeight());
+
+		const block = {
+			height: "5px",
+			marginTop: "3px",
+			marginBottom: "3px",
+		};
+
+		block.getFullHeight = element.getFullHeight;
+
+		console.log(block.getFullHeight());
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		console.log("7)");
+
+		let element1 = {
+			height: 25,
+			getHeight: function() {
+
+				return this.height;
+			}
+		},
+
+			getElementHeight = element1.getHeight.bind(element1);
+
+			console.log(getElementHeight());
+
+
 
 </script>
 </body>
