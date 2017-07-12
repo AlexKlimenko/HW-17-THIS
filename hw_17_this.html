@@ -32,6 +32,26 @@
 /////////////////////////////////////////////////////////////////////////////////////
 			console.log("2");
 
+			function getPrice() {
+
+				return this.price;
+			}
+
+			function getPriceWidhDiscount() {
+
+				return this.price - (this.price * parseInt(this.discount) / 100);
+			}
+
+			const price = {
+				price: 10,
+				discount: '15%',
+				getPrice: getPrice,
+				getPriceWidhDiscount: getPriceWidhDiscount
+			};
+
+			console.log(price.getPrice());
+			console.log(price.getPriceWidhDiscount());
+
 			
 			
 
