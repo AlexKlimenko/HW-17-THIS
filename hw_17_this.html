@@ -14,29 +14,25 @@
 /////////////////////////////////////////////////////////////////////////////////////
 			console.log("1");
 
-
-
-
-
-
-			console.log("2. Написать функцию, которая принимает дату в виде строки, возвращает день в русском формате");
-
-			var anyYear = "29.03.1985",
-				options = {
-					weekday: 'long'
-				};
-
-			function strToDate(year) {
-				var strToArr = [],
-					date;
-				strToArr = year.split(".")
-								.reverse()
-								.join(".");
-				date = new Date(Date.parse(strToArr));
-				return date.toLocaleString('ru',  options);
+			function getSquare() {
+				
+				return this.width * this.height;
 			}
-			var weekdayOfDay = strToDate(anyYear);
-			console.log(weekdayOfDay);
+
+			const rectangle = {
+				width: 399,
+				height: 375,
+				getSquare: getSquare
+			};
+
+			console.log(rectangle.getSquare());
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+			console.log("2");
+
+			
 			
 
 
