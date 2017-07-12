@@ -188,7 +188,7 @@
 				total: total
 			};
 
-			console.log(prod.total());
+			console.log(`${prod.total()} $`);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -196,6 +196,51 @@
 
 		console.log("3)");
 
+
+		function total() {
+
+				return parseFloat(this.price) * this.num;
+			}
+
+
+		var prod1 = {
+				price: "5$",
+				num: 3,
+				total: total
+			},
+			det = {
+				price: "2$",
+				num: 600
+			};
+
+		det.total = prod1.total;
+		console.log(`${det.total()} $`);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+		console.log("4)");
+
+		let sizes = {
+			width: 5,
+			height: 10
+		},
+			getSquare1 = function() {
+
+				return this.width * this.height;
+			};
+
+		var a = getSquare1.call(sizes);
+		console.log(a);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+		console.log("5)");
+
+		let numbers = [4,12,0,10,-2,4];
+
+		var b = Math.min.apply(null, numbers);
+		console.log(b);
 
 
 </script>
